@@ -1,0 +1,25 @@
+﻿<Window x:Class="PcShop.ProgressBar"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:PcShop"
+        mc:Ignorable="d"
+        Title="ProgressBar" Height="500" Width="500" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Border  Grid.RowSpan="2">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="Black" Offset="0.0"/>
+                    <GradientStop Color="LightGray" Offset="0.5"/>
+                    <GradientStop Color="Gray" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            <TextBlock TextWrapping="Wrap" Text="Загрузка...." Margin="173,78,145,362" FontSize="36"/>
+        </Border>
+        <ProgressBar Style="{StaticResource MaterialDesignCircularProgressBar}"  HorizontalAlignment="Left" Height="90" Margin="204,342,0,0" Minimum="0"  Maximum="100" VerticalAlignment="Top" Width="96"
+              Value="{Binding WorkerState}" Foreground="Black">
+        </ProgressBar>
+    </Grid>
+</Window>

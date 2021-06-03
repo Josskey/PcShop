@@ -1,0 +1,38 @@
+﻿<Window x:Class="PcShop.Menu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:PcShop"
+        mc:Ignorable="d"
+        Title="Menu" Height="562" Width="1080" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True" Background="Transparent" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Image Source="/image/catalog.jpg" Stretch="UniformToFill" Grid.ColumnSpan="2"/>
+        <Grid Margin="0,10,0,429" Grid.ColumnSpan="2">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="10 0">
+                <Button Uid="0" Width="150" Content="Компьютер" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Green" Click="Button_Click"/>
+                <Button Uid="1" Width="150" Content="Гарнитура" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Green" Click="Button_Click"/>
+                <Button Uid="2" Width="150" Content="Клавиатура" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Green" Click="Button_Click"/>
+                <Button Uid="3" Width="150" Content="Мышь" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Green" Click="Button_Click"/>
+            </StackPanel>
+            <Grid x:Name="GridCursor" Width="150" Height="5" Background="Green" HorizontalAlignment="Left" Margin="10 0"/>
+            <TextBox materialDesign:HintAssist.Hint="Поиск" VerticalAlignment="Center" Foreground="White" FontSize="18" Margin="694,80,86,10" TextChanged="TextBox_TextChanged"/>
+        </Grid>
+        <Button x:Name="nazad" Height="Auto" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Foreground="Green" Click="back" Margin="1013,16,9,504" Grid.ColumnSpan="2" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180.287"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <materialDesign:PackIcon Kind="Backburger" Height="22" Width="20"/>
+        </Button>
+        <Frame x:Name="Frame1" HorizontalAlignment="Left" Height="393.5" Margin="37.5,138,0,0" VerticalAlignment="Top" Width="997" Navigated="Frame_Navigated" UseLayoutRounding="False" NavigationUIVisibility="Hidden" Grid.ColumnSpan="2"/>
+        <Button x:Name="poisk" Height="Auto" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Foreground="White" Click="search" Margin="1026,92,22,436" Grid.ColumnSpan="2">
+            <materialDesign:PackIcon Kind="search" Height="22" Width="27" />
+        </Button>
+    </Grid>
+</Window>
